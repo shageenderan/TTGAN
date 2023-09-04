@@ -1,0 +1,2 @@
+model_checkpoint_path: "osc_rand_run:3"
+all_model_checkpoint_paths: "osc_rand_run:3"

@@ -1,0 +1,2 @@
+model_checkpoint_path: "synth_rand_rand_run:0"
+all_model_checkpoint_paths: "synth_rand_rand_run:0"

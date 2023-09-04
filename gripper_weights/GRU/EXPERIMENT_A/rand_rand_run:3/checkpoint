@@ -1,0 +1,2 @@
+model_checkpoint_path: "rand_rand_run:3"
+all_model_checkpoint_paths: "rand_rand_run:3"

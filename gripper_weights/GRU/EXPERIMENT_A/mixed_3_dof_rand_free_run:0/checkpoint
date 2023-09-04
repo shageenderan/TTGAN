@@ -1,0 +1,2 @@
+model_checkpoint_path: "mixed_3_dof_rand_free_run:0"
+all_model_checkpoint_paths: "mixed_3_dof_rand_free_run:0"
