@@ -17,7 +17,7 @@ Reference:
 Contact: shageenderan.sapai@monash.edu
 
 This directory contains implementations of TTGAN framework for synthetic time-series data generation
-using one synthetic dataset and two real-world datasets.
+using one synthetic dataset and three self-curated soft robotic datasets.
 
 -   Sine data: Synthetic
 -   PSF Data: Time-series data collected from a pneumatic soft finger (PSF) platform. Consists of 2 featues (pressure + flex) and 22 labels (x,z resultant force and 10 2D markers) 
@@ -30,7 +30,7 @@ python3 -m main_timegan.py or see jupyter-notebook tutorial of TTGAN in tutorial
 ### Code explanation
 
 (1) data_loading.py
-- Transform raw time-series data to preprocessed time-series data (Googld data)
+- Transform raw soft robotic time-series data to preprocessed time-series data
 - Generate Sine data
 
 (2) Metrics directory  
@@ -46,20 +46,18 @@ python3 -m main_timegan.py or see jupyter-notebook tutorial of TTGAN in tutorial
   - Original timegan implementation as in https://github.com/jsyoon0823/TimeGAN  
   (b) ttgan.py
   - Transformer timegan implementation  
-  (c) ttgan_time2vec.py
-  - Transformer timegan implementation using time2vec embedding+pos_embeddings  
-  (d) timegan_9.py
-  - Transformer timegan implementation using only time2vec embedding  
 
 (4) main_timegan.py
-- Report discriminative and predictive scores for the dataset and t-SNE and PCA analysis
+- Generate synthetic data and report discriminative and predictive scores for the dataset and t-SNE and PCA analysis
 
 (5) utils.py
-- Some utility functions for metrics and timeGAN.
+- Some utility functions for metrics.
 
 ### Command inputs:
 
--   data_name: sine, stock, or energy
+-   data_name: sine, PSF, PSC or PSG
+-   actuation: (PSG) 'Random' || 'Osc'
+             : (PSF) 'osc_free_30' || 'osc_tip_30' || 'osc_rand_30' || 'rand_tip_30' || 'rand_free_30' || 'rand_rand_60'
 -   seq_len: sequence length
 -   module: gru, lstm, or lstmLN
 -   hidden_dim: hidden dimensions
@@ -73,9 +71,10 @@ Note that network parameters should be optimized for different datasets.
 ### Example command
 
 ```shell
-$ python3 main_timegan.py --data_name stock --seq_len 24 --module gru
---hidden_dim 24 --num_layer 3 --iteration 50000 --batch_size 128 
---metric_iteration 10
+$ python main_timegan.py --timegan ttgan 
+--data_name PSF --actuation rand_free_30 --output ttgan/PSF/random
+--batch_size 256 --seq_len 100 --module gru
+--iteration 10000 --metric_iteration 5 
 ```
 
 ### Outputs
