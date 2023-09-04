@@ -2,7 +2,7 @@
 
 Authors: Shageenderan Sapai, Loo Junn Yong, Ding Ze Yang, Tan Chee Pin, Vishnu Monn Baskaran and Surya Girinatha Nurzaman
  
-Paper Link: A Deep Learning Framework for Soft Robots with Synthetic Data https://doi.org/10.1089/soro.2022.0188 (doi: 10.1089/soro.2022.0188)
+Paper Link: A Deep Learning Framework for Soft Robots with Synthetic Data https://doi.org/10.1089/soro.2022.0188
 
 Reference: 
 @article{sapai2023deep,
