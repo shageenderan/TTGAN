@@ -1,0 +1,10 @@
+output/
+data/PSG/
+models/timegan_tf1.py
+models/timegan_9.py
+models/ttgan_time2vec.py
+models/W_GP_ttgan.py
+Experiment*
+3DoF.ipynb
+*.mp4
+Supplementary Video.ipynb
