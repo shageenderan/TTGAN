@@ -56,7 +56,7 @@ python3 -m main_timegan.py or see jupyter-notebook tutorial of TTGAN in tutorial
 ### Command inputs:
 
 -   data_name: sine, PSF, PSC or PSG
--   actuation: (PSG) 'Random' || 'Osc'\n\t: (PSF) 'osc_free_30' || 'osc_tip_30' || 'osc_rand_30' || 'rand_tip_30' || 'rand_free_30' || 'rand_rand_60'
+-   actuation: (PSG) 'Random' || 'Osc' or (PSF) 'osc_free_30' || 'osc_tip_30' || 'osc_rand_30' || 'rand_tip_30' || 'rand_free_30' || 'rand_rand_60'
 -   seq_len: sequence length
 -   module: gru, lstm, or lstmLN
 -   hidden_dim: hidden dimensions
