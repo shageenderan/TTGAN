@@ -1,10 +1,18 @@
 # Codebase for "TTGAN"
 
-Authors: Shageenderan Sapai
+Authors: Shageenderan Sapai, Loo Junn Yong, Ding Ze Yang, Tan Chee Pin, Vishnu Monn Baskaran and Surya Girinatha Nurzaman
+ 
+Paper Link: A Deep Learning Framework for Soft Robots with Synthetic Data https://doi.org/10.1089/soro.2022.0188 (doi: 10.1089/soro.2022.0188)
 
 Reference: 
- 
-Paper Link: 
+@article{sapai2023deep,
+  title={A Deep Learning Framework for Soft Robots with Synthetic Data},
+  author={Sapai, Shageenderan and Loo, Junn Yong and Ding, Ze Yang and Tan, Chee Pin and Baskaran, Vishnu Monn and Nurzaman, Surya Girinatha},
+  journal={Soft Robotics},
+  year={2023},
+  publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
+}
+
 
 Contact: shageenderan.sapai@monash.edu
 
@@ -12,8 +20,9 @@ This directory contains implementations of TTGAN framework for synthetic time-se
 using one synthetic dataset and two real-world datasets.
 
 -   Sine data: Synthetic
--   Stock data: https://finance.yahoo.com/quote/GOOG/history?p=GOOG
--   Energy data: http://archive.ics.uci.edu/ml/datasets/Appliances+energy+prediction
+-   PSF Data: Time-series data collected from a pneumatic soft finger (PSF) platform. Consists of 2 featues (pressure + flex) and 22 labels (x,z resultant force and 10 2D markers) 
+-   PSG: Time-series data collected from a pneumatic soft gripper (PSG) platform. This is an extension of the PSF platform and constitues 3 individual PSF's held together at equidistant points. Consists of 6 features (3 * (pressure + flex)) and 93 labels (x,y,z resultant force and 3*10 3D markers) 
+-   PSC: Time-series data collected from a pneumatic soft conituum (PSC) body platform. This platform is capable of non-planar and 3D bending. Consists of 6 features (3 * (pressure + flex)) and 90 labels (3*10 3D markers).
 
 To run the pipeline for training and evaluation on TTGAN framwork, simply run 
 python3 -m main_timegan.py or see jupyter-notebook tutorial of TTGAN in tutorial_timegan.ipynb.
